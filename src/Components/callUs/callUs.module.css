@@ -1,0 +1,8 @@
+.callUs{
+    position: fixed;
+    bottom:0px;
+    display:block;
+    background-color: #3e73ef;
+    color:white;
+    height:50px;
+}

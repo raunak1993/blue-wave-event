@@ -1,0 +1,60 @@
+.container{
+    background-image:url("../../assets/Home/concert.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color:white;
+    background-color: rgba(0,0,0,0.75);
+    
+
+}
+
+
+.contact_details{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.phone,.address,.email{
+    flex-basis: 100%;
+    text-align: center;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+}
+
+.underline{
+    text-decoration: underline;
+    color:#4bcdd0;
+}
+@media only screen and (min-width:768px)
+{
+    /* .main-footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+    } */
+
+    .content{
+        min-height: 35vh;
+        height: auto;
+    }
+    .phone,.address,.email{
+        flex-basis: 30%;
+    }
+    .contact_details{
+        justify-content: space-around;        
+    }
+    .footer{
+        flex-direction: column;
+    }
+    
+}

@@ -1,0 +1,32 @@
+.quote{
+    color:#055a92;
+    font-family: 'Spinnaker', sans-serif;
+    min-height: 30vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.start{
+    font-size:40px;
+    color: #4f4b74;
+
+   
+    
+    
+}
+.main{
+    font-size: 24px;
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+
+   
+}
+
+/* .quote-end{
+    font-size: 40px;
+    color:#224ab7;
+   
+} */
