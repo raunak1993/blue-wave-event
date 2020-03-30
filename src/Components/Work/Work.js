@@ -5,7 +5,7 @@ import IMG2 from "../../assets/Home/event2.png";
 import IMG3 from "../../assets/Home/event3.png";
 import IMG4 from "../../assets/Home/event4.png";
 import {Link} from "react-router-dom";
-import cx from "classnames";
+ import cx from "classnames";
 
 
 const Work = () =>{
@@ -16,14 +16,14 @@ const Work = () =>{
         <div className = {styles.main}>
     
             <div className = {styles.image}>
-            <Link to = "/portfolio"><img src = {IMG1} alt = "img1"/></Link>
+            <Link to = "/portfolio"><img src = {IMG1} alt = "img1" className = {styles.firstImage}/></Link>
             </div>
-            <div>
+            <div className = {styles.parent}>
             <div className = {styles.image}><Link to = "/portfolio"><img src = {IMG2} alt = "img2"/></Link></div>
             <div className = {styles.image}><Link to = "/portfolio"><img src = {IMG3} alt = "img3"/></Link></div>
             </div>
-            <div className = {cx(styles.image,styles.thirdImage)}>
-            <Link to = "/portfolio"><img src = {IMG4} alt = "img4"/></Link>
+            <div className = {cx(styles.image,styles.thirdImageHolder)}>
+            <Link to = "/portfolio"><img src = {IMG4} alt = "img4" className = {styles.thirdImage}/></Link>
             </div>
         
         </div>

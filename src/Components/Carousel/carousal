@@ -7,6 +7,7 @@ import IMG5 from "../../assets/Home/hdfc-ergo.png";
 import IMG6 from "../../assets/Home/zee.png";
 import IMG7 from "../../assets/Home/hdfc-life.png";
 import styles from "./Carousal.module.css";
+import cx from "classnames";
 class Carousel extends React.Component{
     constructor(props){
         super(props);
@@ -33,23 +34,37 @@ class Carousel extends React.Component{
         }
         
     }
-
+    // setWindow = ()=>{
+    //     if(window.innerWidth>500){
+    //         this.setState({size:500});
+    //     }
+    //     else{
+    //         this.setState({size:0})
+    //     }
+    //     return this.state.size;
+    // }
+    
+    // showValue = ()=>{
+        
+    // }
 
     componentDidMount(){
         this.interval();
         
+        
     }
+    cn = `styles.${this.props.className}`;
+
     render(){
         return (<div className = {styles.main}>
-            
-            <div className= {styles.carousal}>
-                {/* <img src = {this.state.currentImage[0]} alt = "1"/>
-                <img src = {this.state.currentImage[1]} alt = "2"/>
-                <img src = {this.state.currentImage[0]} alt = "1"/>
-                <img src = {this.state.currentImage[1]} alt = "2"/> */}
+            {/*this size is {this.props.size}
+            {window.addEventListener("resize",()=>this.setWindow(this.showValue))}*/}
+            <div className = {cx(styles.carousal,styles[this.props.className])}>
+                {/*</div><div className = {this.props.className1}>*/}
                 { this.state.currentImage.map(item =>{
                     return (<div className={styles.image}><img src = {item} alt = "img"/></div>)
                 })}
+                
             
         
         
