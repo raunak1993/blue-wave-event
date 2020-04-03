@@ -6,7 +6,7 @@ const Quote = (props)=>{
         
             <span className = {styles.start}><i class = "fa fa-quote-left"></i></span>
             <p className = {styles.main}>
-            Leave it on Blue Waves to make any event truly memorable.
+                {props.line}
             </p>
             {/* <p className= "quote-end">
                 |
