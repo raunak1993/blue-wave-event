@@ -9,6 +9,7 @@ import Header from "../../Components/Header/Header.js";
 import Footer from "../../Components/Footer/Footer";
 import Work from "../../Components/Work/Work";
 import callUs from "../../Components/callUs/callUs";
+import Divider from "../../Components/Divider/Divider.js";
 
 
 
@@ -18,8 +19,10 @@ const Home =(props)=>{
          <Navbar/>
         
         <Landing src={LANDING_IMG}/>
-        <callUs/>
-        <Quote/> 
+        
+        <Quote/>
+        <Divider/>
+         
         <Client/>
         <Work/>
        <Footer/>

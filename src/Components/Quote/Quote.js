@@ -12,7 +12,7 @@ const Quote = (props)=>{
                 |
             
         </p> */}
-        <Divider/>
+    
     </div>)
 }
 export default Quote;
