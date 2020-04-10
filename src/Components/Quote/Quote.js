@@ -12,7 +12,6 @@ const Quote = (props)=>{
                 |
             
         </p> */}
-    
     </div>)
 }
 export default Quote;

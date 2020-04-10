@@ -10,15 +10,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    padding: 20px;
 
 }
 .heading{
     border:5px solid #6fbeef;
-    width: 50vw;
 }
 .knowusbetterpara{
     color:#055a92;
     font-size: 20px;
-    width:50vw;
+
 }

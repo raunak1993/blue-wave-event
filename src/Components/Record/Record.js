@@ -3,49 +3,55 @@ import  styles from "./Record.module.css";
 const Record = props =>{
     return (
         <div className = {styles.container}>
+            
+        
+
             <div className = {styles.content}>
+            
 
-                <div className = {styles.one}>
+    
+            
+            <div className = {styles.info}>
+                    <i className = "fa fa-newspaper-o fa-3x"></i>
+                    <p className = {styles.numbers}>300+</p>
+                    <p className = {styles.detail}>EVENTS<br/>COMPLETED</p>
+            </div>
+
+
                 <div className = {styles.info}>
-                    <i className = "fa fa-newspaper-o fa-4x"></i>
-                    <div className = {styles.details}>
-                        <div className ={styles.numbers}>300+</div>
-                        <p>EVENTS COMPLETED</p>
-                    </div>
-                </div>
-
-
-                <div className = {styles.info}>
-                    <i className = "fa fa-user fa-4x"></i>
-                    <div className = {styles.details}>
-                        <div className ={styles.numbers}>15000+</div>
-                        <p>GUESTS SERVED</p>
+                    <i className = "fa fa-user fa-3x"></i>
                     
-                </div>
-                </div>
+                        
+                        <p className ={styles.numbers}>15000+</p>
+        
+                    
+                        <p className = {styles.detail}>GUESTS SERVED</p>
+                    
+            
                 </div>
             
-                <div className = {styles.two}>
+                
                 <div className = {styles.info}>
-                    <i className = "fa fa-tripadvisor fa-4x"></i>
-                    <div className = {styles.details}>
-                        <div className ={styles.numbers}>70+</div>
-                        <p>DESTINATION COVERED</p>
+                    <i className = "fa fa-tripadvisor fa-3x"></i>
+                    
+                        <p className ={styles.numbers}>70+</p>
+                        <p className = {styles.detail}>DESTINATION COVERED</p>
                     
                 </div>
-                </div>
+            
 
                 <div className = {styles.info}>
-                    <i className = "fa fa-handshake-o fa-4x"></i>
-                    <div className = {styles.details}>
-                        <div className ={styles.numbers}>5+</div>
-                        <p>YEARS IN SERVICE</p>
+                    <i className = "fa fa-handshake-o fa-3x"></i>
+                    
+                        <p className ={styles.numbers}>5+</p>
+                        <p className = {styles.detail}>YEARS IN SERVICE</p>
                     
                 </div>
-                </div>
-                </div>
+            
+                
         </div>
         </div>
+
     )
 }
 export default Record;
