@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+padding: 0 10%;
+
+}
+.tingtong{
+font-size: 50px;
+width:100vw;
+text-align: center;
+}
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputfield{
+    flex-basis: 100%;
+    
+
+}
+.inputfield2,.inputfield3{
+    flex-basis:100%;
+   
+    }
+
+.input_field{
+    width:100%;
+    color:#2a96b5;
+    border:1px solid #2a96b5;
+    border-radius: 3px;
+    font-size: 15px;
+    height:30px;
+    padding-left: 10px;
+}
+
+.star{
+color:#2a96b5;
+}
+p{
+    color:#5364ed;
+    font-size: 20px;
+}
+button{
+    padding: 15px 30px;
+    color: white;
+    background: #30bded;
+    font-size: 20px;
+    border-radius: 6px;
+}
+@media screen and (min-width:768px){
+    .inputfield2{
+        flex-basis: 47%;
+        padding-right: 3%;
+    }
+    .inputfield3{
+        flex-basis: 47%;
+        padding-left: 3%;
+    }
+}
