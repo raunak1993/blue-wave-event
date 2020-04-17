@@ -6,6 +6,7 @@ padding: 0 10%;
 
 }
 .tingtong{
+color:#5364ed;
 font-size: 50px;
 width:100vw;
 text-align: center;
@@ -38,7 +39,7 @@ text-align: center;
 .star{
 color:#2a96b5;
 }
-p{
+p.input_title{
     color:#5364ed;
     font-size: 20px;
 }
@@ -48,6 +49,8 @@ button{
     background: #30bded;
     font-size: 20px;
     border-radius: 6px;
+    margin-top: 0px;
+    margin-bottom: 80px;
 }
 @media screen and (min-width:768px){
     .inputfield2{

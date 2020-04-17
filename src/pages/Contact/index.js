@@ -5,6 +5,7 @@ import LANDING_IMG from '../../assets/Contact/landing.png';
 import Navbar from "../../Components/Navbar/Navbar";
 import Landing from "../../Components/Landing/Landing";
 import Form from "../../Components/Form/Form";
+import Footer from "../../Components/Footer/Footer";
 
 const Contact = (props) =>{
     return (<div>
@@ -12,6 +13,7 @@ const Contact = (props) =>{
         <Navbar/>
         <Landing src = {LANDING_IMG}/>
         <Form/>
+        <Footer/>
 
 
     </div>)
