@@ -1,14 +1,15 @@
 import React from "react";
+import firebase from 'firebase'
 import styles from "./Form.module.css";
 class Form extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             formData:{
-                name:null,
-                contact:null,
-                email:null,
-                message:null
+                name:'',
+                contact:'',
+                email:'',
+                message:''
 
 
 
@@ -17,11 +18,35 @@ class Form extends React.Component{
     }
     
     setValues = (e) =>{
-        e.preventDefault();
-        this.setState({formData:{name:e.target[0].value,contact:e.target[1].value,email:e.target[2].value,message:e.target[3].value}},()=>console.log(this.state.formData));
-        
+        e.preventDefault()
+        if(this.state.formData.contact === "" || this.state.formData.email === "" ||this.state.formData.message === "" || this.state.formData.name === ""){
+            alert("please fill all the fields")
+        }
+        else{
+            const{name,contact,email,message}=this.state.formData
+
+
+       firebase.firestore().collection('users').doc(email).set({
+           name,
+           contact,
+           email,
+           message
+       }).then(console.log('saved successfully'))
+        }
         
     }
+
+    handleChange=(e)=>{
+        let newValues = this.state.formData;
+        newValues[e.target.id] = e.target.value;
+    this.setState({formData:newValues},console.log(this.state.formData))
+
+    
+    
+        
+    }
+
+
     render(){
         return (
             <>
@@ -29,10 +54,37 @@ class Form extends React.Component{
             
             <form className={styles.contact_form} onSubmit = {(e)=>this.setValues(e)}>
                 <div className ={styles.container}>
-                    <div className = {styles.inputfield}><p className={styles.input_title}>Name <span className = {styles.star}>*</span></p><input className={styles.input_field} required placeholder= "Name"/></div>
-                    <div className = {styles.inputfield2}><p className={styles.input_title}>Contact <span className = {styles.star}>*</span></p><input className={styles.input_field} type = "number" required placeholder= "Contact"/></div>
-                    <div className = {styles.inputfield3}><p className={styles.input_title}>Email <span className = {styles.star}>*</span></p><input className={styles.input_field} type = "email" placeholder= "Email" required/></div>
-                    <div className = {styles.inputfield}><p className={styles.input_title}>Message <span className = {styles.star}>*</span></p><textarea className={styles.input_field} required placeholder= "Message"/></div>
+                    <div className = {styles.inputfield}>
+                        <p className={styles.input_title}>Name 
+                        <span className = {styles.star}>*</span>
+                        </p>
+                        <input value={this.state.name}  className={styles.input_field} placeholder= "Name"  id = "name" onChange = {(e)=>this.handleChange(e)}/>
+                    </div>
+
+
+                    <div className = {styles.inputfield2}>
+                    <p className={styles.input_title}>
+                        Contact 
+                        <span className = {styles.star}>*</span>
+                        </p>
+                        <input value={this.state.contact} className={styles.input_field} type = "number" placeholder= "Contact" id = "contact" onChange = {(e)=>this.handleChange(e)}/>
+                    </div>
+
+
+                    <div className = {styles.inputfield3}>
+                        <p className={styles.input_title}>Email 
+                        <span className = {styles.star}>*</span>
+                        </p>
+                        <input value = {this.state.email} className={styles.input_field} type = "email" placeholder= "Email" id = "email" onChange = {(e)=>this.handleChange(e)}/>
+                    </div>
+
+
+                    <div className = {styles.inputfield}>
+                        <p className={styles.input_title}>Message 
+                        <span className = {styles.star}>*</span>
+                        </p>
+                        <textarea value = {this.state.message} className={styles.input_field} placeholder= "Message" id = "message" onChange = {(e)=>this.handleChange(e)}/>
+                    </div>
                     
                 </div>
                 <button className = {styles.submit}><i className = "fa fa-angellist"></i> Send</button>
