@@ -52,6 +52,11 @@ button{
     margin-top: 0px;
     margin-bottom: 80px;
 }
+.error{
+    padding: 5px;
+    color:#2a96b5;
+    font-size:20px;
+}
 @media screen and (min-width:768px){
     .inputfield2{
         flex-basis: 47%;

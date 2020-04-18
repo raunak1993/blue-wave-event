@@ -13,16 +13,20 @@ class Form extends React.Component{
 
 
 
-            }
+            },
+            error : ""
         }
     }
     
     setValues = (e) =>{
         e.preventDefault()
         if(this.state.formData.contact === "" || this.state.formData.email === "" ||this.state.formData.message === "" || this.state.formData.name === ""){
-            alert("please fill all the fields")
+            //alert("please fill all the fields")
+            this.setState({error:"Please fill all the fields"})
+            
         }
         else{
+            this.setState({error:""})
             const{name,contact,email,message}=this.state.formData
 
 
@@ -89,7 +93,9 @@ class Form extends React.Component{
                 </div>
                 <button className = {styles.submit}><i className = "fa fa-angellist"></i> Send</button>
     
-                
+                {this.state.error?
+                <div className = {styles.error}>{this.state.error}</div>
+                :null}
     
             </form>
             </>
