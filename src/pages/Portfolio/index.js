@@ -8,6 +8,7 @@ import Quote from "../../Components/Quote/Quote";
 import Divider from "../../Components/Divider/Divider";
 import Title1 from "../../Components/Title1/Title1.js";
 import Paras from "../../Components/Paras/Paras";
+import Client from "../../Components/Client/Client";
 const Portfolio = (props) =>{
     return (<>
         <Header src = {LOGO}/>
@@ -18,6 +19,7 @@ const Portfolio = (props) =>{
         <Title1 text= "Our Special Events"/>
         <Divider/> 
         <Paras/>   
+        <Client/>
         </>)
 }
 export default Portfolio;
