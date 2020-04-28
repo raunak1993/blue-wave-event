@@ -1,14 +1,12 @@
 import React from "react"
 import Carousel from "../Carousel/Carousel"
-import HorizontalDivider from "../horizontalDivider/HorizontalDivider"
-import Divider from "../Divider/Divider.js"
 import styles from "./Client.module.css"
 
-import IMG1 from "../../assets/Home/logo2.png"
-import IMG2 from "../../assets/Home/logo3.jpg"
-import IMG3 from "../../assets/Home/logo4.png"
-import IMG4 from "../../assets/Home/logo5.png"
-import IMG5 from "../../assets/Home/logo6.png"
+import IMG1 from "../../assets/Home/logo1.png"
+import IMG2 from "../../assets/Home/logo2.png"
+import IMG3 from "../../assets/Home/logo3.png"
+import IMG4 from "../../assets/Home/logo4.png"
+import IMG5 from "../../assets/Home/logo5.png"
 
 const MOBILE_SCREENS = [
   {
@@ -68,11 +66,11 @@ class Client extends React.Component {
   render() {
     return (
       <div className={styles.main}>
-        <div className={styles.client}>Our clients</div>
+        {/* <div className={styles.client}>Our clients</div>
         <HorizontalDivider />
         <p className={styles.client_para}>
           SOME OF THE COMPANIES THAT EXPERIENCED OUR EVENT
-        </p>
+        </p> */}
 
         {/* MOBILE SLIDER */}
         <div className={styles.mobile_slider}>
@@ -112,8 +110,6 @@ class Client extends React.Component {
             ))}
           </Carousel>
         </div>
-        <HorizontalDivider />
-        <Divider />
       </div>
     )
   }
