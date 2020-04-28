@@ -2,3 +2,8 @@
     color:#2664f2;
     font-size: 36px;
 }
+.container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
