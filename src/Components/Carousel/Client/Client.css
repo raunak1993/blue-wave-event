@@ -1,0 +1,31 @@
+hr{
+    color:white;
+}
+.client{
+width: 100vw;
+text-align: center;
+font-size: 50px;
+color:#2664f2;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+
+}
+.client-para{
+    color:#7ec3e7;
+    line-height: 1.5em;
+    letter-spacing: 5.4px;
+    text-align: center;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.classname1{
+    display: none;
+}
+.className2{
+    display: none;
+}
