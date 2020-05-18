@@ -8,7 +8,9 @@ import Quote from "../../Components/Quote/Quote";
 import Divider from "../../Components/Divider/Divider";
 import Title1 from "../../Components/Title1/Title1.js";
 import Paras from "../../Components/Paras/Paras";
-import Client from "../../Components/Client/Client";
+import Slider from "../../Components/Slider/Slider";
+import Footer from "../../Components/Footer/Footer";
+
 const Portfolio = (props) =>{
     return (<>
         <Header src = {LOGO}/>
@@ -16,10 +18,13 @@ const Portfolio = (props) =>{
         <Landing src = {LANDING_IMG}/>
         <Quote text = "We don't just organize events we fill emotions in them."/>
         <Divider/>
-        <Title1 text= "Our Special Events"/>
+        <Title1 text= "Our Special Events" style= {{color:"red"}}/>
         <Divider/> 
-        <Paras/>   
-        <Client/>
+        <Paras/> 
+        <Divider/>
+        <Title1 text = "Gallery of Gala events"/>  
+        <Slider/>
+        <Footer/>
         </>)
 }
 export default Portfolio;

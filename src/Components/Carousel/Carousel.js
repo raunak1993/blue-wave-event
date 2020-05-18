@@ -49,7 +49,7 @@ class Carousel extends React.Component {
 
       return {
         activeIndex: activeIndex + 1,           //when not last slide(6th slide)
-        transition: "transform  ease-in-out"
+        transition: "transform ease-in-out"
       }
     })
   }

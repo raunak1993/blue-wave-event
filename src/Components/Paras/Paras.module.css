@@ -1,23 +1,27 @@
 .container{
     display: flex;
     color: #2b69f0;
-    flex-direction: column;
+    flex-wrap: wrap;
     
 }
 .date{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-weight: bold;
     padding: 10px;
+    flex-basis: 100%;
 }
 .details{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 @media screen and (min-width:768px){
     .date{
     
         flex-basis:20%;
     }
-    .container{
+    /* .container{
         flex-direction: row;
+    } */
+    .details{
+        flex-basis: 60%;
     }
 }
