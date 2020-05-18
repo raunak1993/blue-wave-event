@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.heading{
+  color:#2a59d8;
+  font-size: 40px;  
+}
+.para{
+    color:#055a92;
+    text-align: center;
+}

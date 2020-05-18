@@ -1,0 +1,23 @@
+.KnowUsBetter{
+    background-image:url("../../assets/Team/cloud.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    color:#2659d8;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+.heading{
+    border:5px solid #6fbeef;
+}
+.knowusbetterpara{
+    color:#055a92;
+    font-size: 20px;
+
+}

@@ -44,6 +44,7 @@ class Carousel extends React.Component {
         return {
           activeIndex: activeIndex + 1,
           transition: "transform  ease-in-out"
+
         }
       }
 

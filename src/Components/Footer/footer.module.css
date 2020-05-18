@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    max-width: 100vw;
 }
 .content{
     display:flex;
@@ -12,6 +12,7 @@
     align-items: center;
     flex-wrap: wrap;
     color:white;
+    padding:7vh;
     background-color: rgba(0,0,0,0.75);
     
 
@@ -46,6 +47,7 @@
 
     .content{
         min-height: 35vh;
+    
         height: auto;
     }
     .phone,.address,.email{
