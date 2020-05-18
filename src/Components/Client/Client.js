@@ -1,54 +1,121 @@
-import React from "react";
-import Carousel from "../Carousel/Carousel";
-import HorizontalDivider from "../horizontalDivider/HorizontalDivider";
+import React from "react"
+import Carousel from "../Carousel/Carousel"
+import HorizontalDivider from "../horizontalDivider/HorizontalDivider"
 import Divider from "../Divider/Divider.js"
-import "./Client.css";
-import MediaQuery from "react-responsive";
-import styled from "styled-components";
-class Client extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            size:888
-        };
-        this.size= 0
-    }
-    changeSize(){
-        this.setState({size:500},()=>{return alert(this.state.size)})
-    }
-    //Button = styled.button`
-    //@media only screen and (min-width:700px){
-      //  background-color:violet;
-       // ${this.changeSize()};
-    //}`
-    // changeSize = (props)=>{
-    //     return (<><MediaQuery query = "(min-width:500px)">
-    //     {/* <div>media query</div> */}
-    //     {/* {this.size = 500} */}
-    //     {this.setState({size:600})}
-        
-    // </MediaQuery>
-    // <div>{this.state.size}</div></>)
+import styles from "./Client.module.css"
 
-    //     }
-    render(){
-        return (<div className = "main">
-            {/* <this.Button>hi</this.Button> */}
-            
-    <div className = "client">Our clients</div>
-    <HorizontalDivider/>
-    <p className = "client-para">SOME OF THE COMPANIES THAT EXPERIENCED OUR EVENT</p>
-        {this.state.size}
-        <div className = "main">
-        <Carousel className = "classname1" size = {2}/>
-        <Carousel className = "classname2" size = {3}/>
-        <Carousel className = "classname3" size = {5}/>
-        <HorizontalDivider/>
-        <Divider/>
+import IMG1 from "../../assets/Home/logo2.png"
+import IMG2 from "../../assets/Home/logo3.jpg"
+import IMG3 from "../../assets/Home/logo4.png"
+import IMG4 from "../../assets/Home/logo5.png"
+import IMG5 from "../../assets/Home/logo6.png"
+
+const MOBILE_SCREENS = [
+  {
+    screen: [IMG1, IMG2]
+  },
+  {
+    screen: [IMG2, IMG3]
+  },
+  {
+    screen: [IMG3, IMG4]
+  },
+  {
+    screen: [IMG4, IMG5]
+  },
+  {
+    screen: [IMG5, IMG1]
+  }
+]
+
+const TAB_SCREENS = [
+  {
+    screen: [IMG1, IMG2, IMG3]
+  },
+  {
+    screen: [IMG2, IMG3, IMG4]
+  },
+  {
+    screen: [IMG3, IMG4, IMG5]
+  },
+  {
+    screen: [IMG4, IMG5, IMG1]
+  },
+  {
+    screen: [IMG5, IMG1, IMG2]
+  }
+]
+
+const DESKTOP_SCREENS = [
+  {
+    screen: [IMG1, IMG2, IMG3, IMG4, IMG5]
+  },
+  {
+    screen: [IMG2, IMG3, IMG4, IMG5, IMG1]
+  },
+  {
+    screen: [IMG3, IMG4, IMG5, IMG1, IMG2]
+  },
+  {
+    screen: [IMG4, IMG5, IMG1, IMG2, IMG3]
+  },
+  {
+    screen: [IMG5, IMG1, IMG2, IMG3, IMG4]
+  }
+]
+
+class Client extends React.Component {
+  render() {
+    return (
+      <div className={styles.main}>
+        <div className={styles.client}>Our clients</div>
+        <HorizontalDivider />
+        <p className={styles.client_para}>
+          SOME OF THE COMPANIES THAT EXPERIENCED OUR EVENT
+        </p>
+
+        {/* MOBILE SLIDER */}
+        <div className={styles.mobile_slider}>
+          <Carousel>
+            {MOBILE_SCREENS.map((screen, index) => (
+              <div key={index} className={styles.image_box}>
+                {screen.screen.map((image, index) => (
+                  <img className={styles.image} src={image} alt="client-logo" />
+                ))}
+              </div>
+            ))}
+          </Carousel>
         </div>
 
-        
-    </div>)
-    }
+        {/* TAB and Small laptop slider */}
+        <div className={styles.tab_slider}>
+          <Carousel>
+            {TAB_SCREENS.map((screen, index) => (
+              <div className={styles.image_box} key={index}>
+                {screen.screen.map((image, index) => (
+                  <img className={styles.image} src={image} alt="client-logo" />
+                ))}
+              </div>
+            ))}
+          </Carousel>
+        </div>
+
+        {/* Desktop Slider */}
+        <div className={styles.desktop_slider}>
+          <Carousel>
+            {DESKTOP_SCREENS.map((screen, index) => (
+              <div className={styles.image_box} key={index}>
+                {screen.screen.map((image, index) => (
+                  <img className={styles.image} src={image} alt="client-logo" />
+                ))}
+              </div>
+            ))}
+          </Carousel>
+        </div>
+        <HorizontalDivider />
+        <Divider />
+      </div>
+    )
+  }
 }
-export default Client;
+export default Client
