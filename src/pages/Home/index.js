@@ -8,7 +8,7 @@ import LOGO from "../../assets/Header/logo.png";
 import Header from "../../Components/Header/Header.js";
 import Footer from "../../Components/Footer/Footer";
 import Work from "../../Components/Work/Work";
-
+import Divider from "../../Components/Divider/Divider"
 
 
 
