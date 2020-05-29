@@ -31,7 +31,7 @@ class Navbar extends React.Component{
                             <Link to = "/contact" className={styles.link}>Contact</Link>
     
         
-    </div>:<div className = {styles.menu} onClick = {()=>this.openClose()}><i class="fa fa-bars"></i>
+    </div>:<div className = {styles.menu} onClick = {()=>this.openClose()}><i className="fa fa-bars"></i>
 
 </div>
         }

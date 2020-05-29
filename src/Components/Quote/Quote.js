@@ -4,7 +4,7 @@ import Divider from "../Divider/Divider";
 const Quote = (props)=>{
     return (<div className = {styles.quote}>
         
-            <span className = {styles.start}><i class = "fa fa-quote-left"></i></span>
+            <span className = {styles.start}><i className = "fa fa-quote-left"></i></span>
             <p className = {styles.main}>
                 {props.line}
             </p>

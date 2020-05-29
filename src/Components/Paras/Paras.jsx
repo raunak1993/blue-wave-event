@@ -78,7 +78,7 @@ render(){
     return (
         <>
         {this.state.paras.map(item =>{
-            return (<div className = {styles.container}><div className = {styles.date}>{item[0]}</div><div className = {styles.details}>{item[1]}</div></div>)
+            return (<div key = {item} className = {styles.container}><div className = {styles.date}>{item[0]}</div><div className = {styles.details}>{item[1]}</div></div>)
         })}
         </>
     )

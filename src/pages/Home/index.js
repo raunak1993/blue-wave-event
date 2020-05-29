@@ -21,7 +21,7 @@ const Home =(props)=>{
 
 
         
-        <Quote/>
+        <Quote line = "Leave it on Blue Waves to make any event truly memorable."/>
         <Divider/>
          
 

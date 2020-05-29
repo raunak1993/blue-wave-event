@@ -80,7 +80,7 @@ class Client extends React.Component {
             {MOBILE_SCREENS.map((screen, index) => (
               <div key={index} className={styles.image_box}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}
@@ -93,7 +93,7 @@ class Client extends React.Component {
             {TAB_SCREENS.map((screen, index) => (
               <div className={styles.image_box} key={index}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}
@@ -106,7 +106,7 @@ class Client extends React.Component {
             {DESKTOP_SCREENS.map((screen, index) => (
               <div className={styles.image_box} key={index}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}

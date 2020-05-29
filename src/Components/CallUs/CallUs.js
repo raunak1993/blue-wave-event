@@ -3,7 +3,7 @@ import styles from "./CallUs.module.css"
 const CallUs = () =>{
     return (<>
 
-    <a href = "tel:+91123"><div className = {styles.CallUs}><i class = "fa fa-phone fa-3x"></i>Call Now</div></a>
+    <a href = "tel:+91123"><div className = {styles.CallUs}><i className = "fa fa-phone fa-3x"></i>Call Now</div></a>
 
     </>)
 }

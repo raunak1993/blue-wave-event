@@ -8,7 +8,7 @@ class Client1 extends React.Component {
   
     
     this.default=props.image
-    console.log(this.default);
+    // console.log(this.default);
     
 
     
@@ -96,7 +96,7 @@ class Client1 extends React.Component {
             {this.MOBILE_SCREENS.map((screen, index) => (
               <div key={index} className={styles.image_box}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}
@@ -109,7 +109,7 @@ class Client1 extends React.Component {
             {this.TAB_SCREENS.map((screen, index) => (
               <div className={styles.image_box} key={index}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}
@@ -120,7 +120,7 @@ class Client1 extends React.Component {
             {this.DESKTOP_SCREENS.map((screen, index) => (
               <div className={styles.image_box} key={index}>
                 {screen.screen.map((image, index) => (
-                  <img className={styles.image} src={image} alt="client-logo" />
+                  <img key = {index} className={styles.image} src={image} alt="client-logo" />
                 ))}
               </div>
             ))}

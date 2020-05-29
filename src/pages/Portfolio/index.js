@@ -18,7 +18,7 @@ const Portfolio = (props) =>{
         <Landing src = {LANDING_IMG}/>
         <Quote line = "We don't just organize events we fill emotions in them."/>
         <Divider/>
-        <Title1 text= "Our Special Events" style= {{color:"red"}}/>
+        <Title1  text= "Our Special Events" style= {{color:"red"}}/>
         <Divider/> 
         <Paras/> 
         <Divider/>
