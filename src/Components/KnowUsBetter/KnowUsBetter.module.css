@@ -15,9 +15,11 @@
 }
 .heading{
     border:5px solid #6fbeef;
+    min-width: 60vw;
 }
 .knowusbetterpara{
     color:#055a92;
     font-size: 20px;
+    width:60vw;
 
 }
